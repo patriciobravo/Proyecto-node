@@ -1,4 +1,4 @@
-# proyecto-nodeGen5
+# proyecto-node
 
 Patricio Toro valdes
 patricio.andres21@gmail.com
