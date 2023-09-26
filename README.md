@@ -4,18 +4,7 @@ Patricio Toro valdes
 patricio.andres21@gmail.com
 
 
-Se descargan front Vuejs  -> node-ui
-
->cd node-ui  
- >npm install 
- 
-para instalar todos los paquetes 
-
-*levantar el proyecto Vuejs
- >npm run serve
-
-
-Se descargan backend Nodejs
+Backend Nodejs
 
 >cd backend
  >npm install 
