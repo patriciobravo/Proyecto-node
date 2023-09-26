@@ -1,0 +1,532 @@
+{
+	"info": {
+		"_postman_id": "12c79331-07fa-44d6-992f-d36b5f4f0e1a",
+		"name": "ProyectoNode",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Tipo Productos",
+			"item": [
+				{
+					"name": "Listar tipo de productos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tipo_ProductosNom\":\"Verduras\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3001/api/tipo_producto",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"tipo_producto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar id tipo de productos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tipo_ProductosNom\":\"Verduras\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3001/api/tipo_producto/60a1cde0a532b724acb0cdc3",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"tipo_producto",
+								"60a1cde0a532b724acb0cdc3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Guardar tipo de productos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tipo_ProductosNom\":\"Frutas\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3001/api/tipo_producto",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"tipo_producto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar tipo de producto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tipo_ProductosNom\": \"Cecinas\"    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3001/api/tipo_producto/60a1e93f41fbfa421877c928",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"tipo_producto",
+								"60a1e93f41fbfa421877c928"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Productos",
+			"item": [
+				{
+					"name": "Guardar productos",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOiI2MGI0NGExYTgxMjg5MjNiYThhMDg2YjMiLCJuYW1lIjoiUHJ1ZWJhMSIsInBlcmZpbCI6IkFkbWluIiwiaWF0IjoxNjIzMDg4NTkzLCJleHAiOjE2MjMwODg3MTN9.5fRoNX2hfYDvirK-eObSq4qUMTuoQ9QFi1JjeP6OcXU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "ProductoNom",
+									"value": "Zapatillas",
+									"type": "text"
+								},
+								{
+									"key": "precio",
+									"value": "15000",
+									"type": "text"
+								},
+								{
+									"key": "stock",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "producto_tipo",
+									"value": "Frutas",
+									"type": "text"
+								},
+								{
+									"key": "estado",
+									"value": "ACTIVO",
+									"type": "text"
+								},
+								{
+									"key": "imagen",
+									"type": "file",
+									"src": "/C:/Users/Patrico.toro/Downloads/boleta.png"
+								},
+								{
+									"key": "perfil",
+									"value": "Admin",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3001/api/producto",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"producto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar productos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "imagen",
+									"type": "file",
+									"src": "/C:/CodesPT/NodeJs/node_gen5/upload/home.PNG"
+								},
+								{
+									"key": "ProductoNom",
+									"value": "Cebollas",
+									"type": "text"
+								},
+								{
+									"key": "precio",
+									"value": "1000",
+									"type": "text"
+								},
+								{
+									"key": "stock",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "producto_tipo",
+									"value": "Verduras",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3001/api/producto",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"producto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar productos",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "imagen",
+									"type": "file",
+									"src": "/C:/Users/Usuario Apiux/Downloads/ooo.jpg"
+								},
+								{
+									"key": "ProductoNom",
+									"value": "Zanahorias",
+									"type": "text"
+								},
+								{
+									"key": "precio",
+									"value": "590",
+									"type": "text"
+								},
+								{
+									"key": "stock",
+									"value": "1000",
+									"type": "text"
+								},
+								{
+									"key": "producto_tipo",
+									"value": "Verduras",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3001/api/producto/60a1f7770d9bcc4494909339",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"producto",
+								"60a1f7770d9bcc4494909339"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"prueba1@gmail.com\",\r\n    \"password\":\"Fbravo&27\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3001/api/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"ppp1\",\r\n    \"email\":\"ppp1@gmail.com\",\r\n    \"password\":\"Fbravogt&27\",\r\n    \"perfil\": \"Cliente\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3001/api/register",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "Listar Usuario por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3001/api/usuarios/60a995130f055c248c77d28f",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"usuarios",
+								"60a995130f055c248c77d28f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Carrito",
+			"item": [
+				{
+					"name": "Crear Carro",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\": \"60b57dabe6e15257f0a7696e\",\r\n    \"usuarioId\": \"60bd1d75fdd1002954ea7113\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3001/api/addCarro",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"addCarro"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Limpiar Carro",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"usuarioId\": \"60bd1d75fdd1002954ea7113\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3001/api/carro/60bd1d75fdd1002954ea7113",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"carro",
+								"60bd1d75fdd1002954ea7113"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Quitar producto de carrito",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"productId\": \"60b44a4f8128923ba8a086b5\",\r\n  \"usuarioId\": \"60bd1d75fdd1002954ea7113\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3001/api/carro",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"carro"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar compras por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3001/api/compras/listar/60bd1d75fdd1002954ea7113",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"compras",
+								"listar",
+								"60bd1d75fdd1002954ea7113"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Compras",
+			"item": [
+				{
+					"name": "Ver Compras",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3001/api/compras",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"compras"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
