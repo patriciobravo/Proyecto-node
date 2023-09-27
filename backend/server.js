@@ -22,6 +22,7 @@ app.use(bodyparser.urlencoded({ extended: false }));
 app.use(bodyparser.json());
 
 app.get('/app/*', function (req, res) {
+  res.send("Hello Profesor Miguel Chamorro!!!")
   res.sendFile(__dirname+"/public/index.html");
 });
 
