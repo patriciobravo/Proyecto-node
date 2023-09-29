@@ -21,9 +21,11 @@ app.use(busboy());
 app.use(bodyparser.urlencoded({ extended: false }));
 app.use(bodyparser.json());
 
+app.use('/healthcheck', require('./routercleas/health_checker'));
+
 app.get('/app/*', function (req, res) {
-  res.send("Hello Profesor Miguel Chamorro!!!")
-  res.sendFile(__dirname+"/public/index.html");
+  res.send("Backend en Node Js Ok!!!")
+  //res.sendFile(__dirname+"/public/index.html");
 });
 
 
