@@ -21,7 +21,7 @@ app.use(busboy());
 app.use(bodyparser.urlencoded({ extended: false }));
 app.use(bodyparser.json());
 
-app.use('/healthcheck', require('./routercleas/health_checker'));
+app.use('/healthcheck', require('./routers/health_checker'));
 
 app.get('/app/*', function (req, res) {
   res.send("Backend en Node Js Ok!!!")
