@@ -2,7 +2,8 @@
 	"info": {
 		"_postman_id": "12c79331-07fa-44d6-992f-d36b5f4f0e1a",
 		"name": "ProyectoNode",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14007840"
 	},
 	"item": [
 		{
@@ -182,12 +183,7 @@
 									"value": "Admin",
 									"type": "text"
 								}
-							],
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+							]
 						},
 						"url": {
 							"raw": "localhost:3001/api/producto",
@@ -317,7 +313,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\":\"prueba1@gmail.com\",\r\n    \"password\":\"Fbravo&27\"\r\n}",
+							"raw": "{\r\n    \"email\":\"admin1@gmail.com\",\r\n    \"password\":\"Prueba&Password27\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -325,9 +321,13 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:3001/api/login",
+							"raw": "http://44.208.167.63:3001/api/login",
+							"protocol": "http",
 							"host": [
-								"localhost"
+								"44",
+								"208",
+								"167",
+								"63"
 							],
 							"port": "3001",
 							"path": [
@@ -345,7 +345,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"ppp1\",\r\n    \"email\":\"ppp1@gmail.com\",\r\n    \"password\":\"Fbravogt&27\",\r\n    \"perfil\": \"Cliente\"\r\n}",
+							"raw": "{\r\n    \"name\": \"admin1\",\r\n    \"email\":\"admin1@gmail.com\",\r\n    \"password\":\"Prueba&Password27\",\r\n    \"perfil\": \"Admin\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -353,9 +353,13 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:3001/api/register",
+							"raw": "http://44.208.167.63:3001/api/register",
+							"protocol": "http",
 							"host": [
-								"localhost"
+								"44",
+								"208",
+								"167",
+								"63"
 							],
 							"port": "3001",
 							"path": [
@@ -374,18 +378,30 @@
 				{
 					"name": "Listar Usuario por Id",
 					"request": {
+						"auth": {
+							"type": "noauth"
+						},
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOiI2NTEzOTM2NGMxOWI5YjZjYjA5NWU2N2IiLCJuYW1lIjoiYWRtaW4xIiwicGVyZmlsIjoiQWRtaW4iLCJpYXQiOjE2OTYwMzE3MjUsImV4cCI6MTY5NjAzMTg0NX0.brNHmeo7-Fe3Dc9_riXZNJBpae3c24tHMikm138Qza8",
+								"type": "text"
+							}
+						],
 						"url": {
-							"raw": "localhost:3001/api/usuarios/60a995130f055c248c77d28f",
+							"raw": "http://44.208.167.63:3001/api/usuarios",
+							"protocol": "http",
 							"host": [
-								"localhost"
+								"44",
+								"208",
+								"167",
+								"63"
 							],
 							"port": "3001",
 							"path": [
 								"api",
-								"usuarios",
-								"60a995130f055c248c77d28f"
+								"usuarios"
 							]
 						}
 					},
